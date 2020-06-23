@@ -32,7 +32,7 @@ body{
 }
 
 header{
-    margin: 0 auto;
+    margin:0 auto;
     padding: 35px 25px;
     display: flex;
     flex-wrap: wrap;
@@ -149,7 +149,7 @@ main .highlights {
     width: 100%;
 }
 
-main .highlights > .title{
+main .highlights > .title, main .contact > .title, main .contact .info .social .title{
     margin: 15px 0;
     padding: 10px 0;
     text-align: center;
@@ -177,6 +177,66 @@ main .highlights .product .image{
     width: 100%;
 }
 
+main .contact{
+    padding: 25px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main .contact > .title, main .contact .info .social .title{
+    margin-bottom: 55px ;
+    width: 100%;
+}
+
+main .contact .location{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    width: 100%;
+}
+
+main .contact .location .map{
+    width: 100%;
+}
+
+main .contact .info{
+    margin: 0 auto;
+}
+
+main .contact .info .social{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main .contact .info ul li, main .contact .info .social li{
+    list-style: none;
+}
+
+main .contact .info .social li{
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+main .contact .info ul:first-child{
+    padding-top: 20px;
+}
+
+main .contact .info ul:first-child li{
+    padding: 5px 0
+}
+
+main .contact .info ul li a{
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+main .contact .info ul li a:hover{
+    color: rgb(148, 26, 29);
+}
+
 @media only screen and (max-width: 700px) {
     
     main .intro > .title{
@@ -199,14 +259,30 @@ main .highlights .product .image{
     }
      
 
-    main .highlights > .title{
+    main .highlights > .title, main .contact > .title, main .contact .info .social .title{
         font-size: 1.25rem;
         width: 80%;
         border-bottom: #fff 1px solid;
     }
+
+    main .contact .info .social .title{
+        width: 100%;
+    }
     
-    main .highlights .product .title{
+    main .contact > .title, main .contact .info .social .title {
+        margin-bottom: 20px;
+    }
+
+    main .highlights .product .title, main .contact .info ul li{
         font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+    
+    main .contact .info ul li{
+        font-size: .85rem;
     }
 
 }
